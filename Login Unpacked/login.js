@@ -54,7 +54,7 @@ $(function() {
             var url = "https://ccahack.bergen.org/auth/perfigo_weblogin.jsp?cm=ws32vklm&uri=https%3A%2F%2Fccahack.bergen.org%2F";
             $.ajax({
                 type : 'GET',
-                url: "http://localhost:8000/stuff.html",
+                url: url,
                 success: function(data){
                     var form = $(data);
                     var ip = form.find("input[name='userip']").val();
