@@ -9,6 +9,7 @@ $(function() {
         }
     });
     function cookieFound(cookie){
+        $('body').append('<h1>Logging In...</h1>');
         var user_pass = cookie.split("-");
         var username = user_pass[0];
         var password = user_pass[1];
@@ -84,6 +85,7 @@ $(function() {
         });
     }
     function worked(){
+        $('h1').remove();
         $('#form').remove();
         $('#clear').remove();
         $('body').append('<h1>Successfully Logged In!</h1>');
