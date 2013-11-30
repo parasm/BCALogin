@@ -4,11 +4,14 @@
   "name": "BCA Auto Login",
   "description": "This extension automatically signs you into the BCA wifi",
   "version": "1.0",
-  "permissions": [ "cookies", "http://*/*", "https://*/*" ],
+  "permissions": [ "cookies", "alarms" , "http://*/*", "https://*/*" ],
   "content_scripts": [{
     "matches": ["http://*/*","https://*/*"],
     "js": ["jquery.js","login.js"]
   }],
+  "background": {
+    "scripts": ["jquery.js", "background.js"]
+  },
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"

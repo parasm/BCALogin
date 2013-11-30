@@ -1,5 +1,5 @@
 $(function() {
-    chrome.cookies.get({ url: 'https://www.google.com/', name: 'sign_in' },
+    chrome.cookies.get({ url: 'https://ccahack.bergen.org/auth/perfigo_validate.jsp', name: 'sign_in' },
     function (cookie) {
         if (cookie) {
           cookieFound(cookie.value);
@@ -81,7 +81,7 @@ $(function() {
                     success : worked
                 });
             }
-            chrome.cookies.set({ url: "https://www.google.com/", name: "sign_in", value: username+"-"+password });
+            chrome.cookies.set({ url: "https://ccahack.bergen.org/auth/perfigo_validate.jsp", name: "sign_in", value: username+"-"+password });
         });
     }
     function worked(){

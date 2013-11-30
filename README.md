@@ -1,10 +1,8 @@
 BCALogin
 ========
 <p>Simply enter your username and password the first time you open the extenstion</p>
-<p>Then from then on it will remember you and just click on the extension to be signed in</p>
+<p>From then on out it will sign you in automatically every 55 minutes</p>
+<p>If you want ot sign in manually, then just click on the extension to be signed in</p>
+<h4>Installation</h4>
 <p>To install, go to chrome and find your extensions page <a href="chrome://extensions/">(chrome://extensions/)</a></p>
-<p>Then find where you downloaded login.crx and drag it into the extensions page</p>
-<h3>Updates to Come:</h3>
-<ul>
-	<li>Automatic Sign in every 60 minutes</li>
-</ul>
+<p>Then find where you downloaded BCA Login.crx and drag it into the extensions page</p>
