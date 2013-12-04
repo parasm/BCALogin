@@ -44,5 +44,5 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
 });
 
 chrome.alarms.create('BCA', {
-    periodInMinutes: 55
+    periodInMinutes: 10
 });
