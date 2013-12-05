@@ -47,7 +47,7 @@ $(function() {
         $('body').append('<form method="POST" id="form"><label>Enter username<input id="username"></label><br>'+
             '<label>Enter password <input id="password" type="password">  </label> '+
             '<br><button type="submit" id="button">Sign In</button>'+
-            '</form><button id="clear">Clear Saved Login</button>');
+            '</form>');
         $('#form').submit(function (event) {
             event.preventDefault();
             var username = $('#username').val();
