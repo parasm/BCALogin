@@ -7,6 +7,6 @@ BCALogin
 <p>If it is says Successfully Signed In! but you are not being signed into the wifi, you have most likely enter your login information incorrectly. Click not the extension and let it sign you in and then click on the Clear Saved Login button.</p>
 ### Installation
 [Download here](https://codeload.github.com/parasm/BCALogin/zip/master)
-<p>To install, go to chrome and find your extensions page. ([chrome://extensions/](chrome://extensions/))
+<p>To install, go to chrome and find your extensions page.<a href=“chrome://extensions/“>(chrome://extensions/)</a> </p>
 <p>Then find where you downloaded BCA Login.crx and drag it into the extensions page.</p>
-<p>If you cannot install it that way for some reason, go to the extensions page( [chrome://extensions/](chrome://extensions/)) turn on developer tools click Load unpacked extension, then find the Login Unpacked folder and load it.</p>
+<p>If you cannot install it that way for some reason, go to the extensions page <a href=“chrome://extensions/“>(chrome://extensions/)</a> turn on developer tools click Load unpacked extension, then find the Login Unpacked folder and load it.</p>
