@@ -46,7 +46,7 @@ $(function() {
     function cookieNotFound(){
         $('body').append('<form method="POST" id="form"><label>Enter username<input id="username"></label><br>'+
             '<label>Enter password <input id="password" type="password">  </label> '+
-            '<br><button type="submit" id="button">Sign In</button>'+
+            '<br><button type="submit" id="sign">Sign In</button>'+
             '</form>');
         $('#form').submit(function (event) {
             event.preventDefault();
@@ -81,13 +81,22 @@ $(function() {
                     success : worked
                 });
             }
-            chrome.cookies.set({ url: "https://ccahack.bergen.org/auth/perfigo_validate.jsp", name: "sign_in", value: username+"-"+password });
+            chrome.cookies.set({ url: "https://ccahack.bergen.org/auth/perfigo_validate.jsp", name: "sign_in", value: username+"-"+password , expirationDate:  (new Date().getTime()/1000)*100});
         });
     }
     function worked(){
         $('h1').remove();
         $('#form').remove();
         $('#clear').remove();
-        $('body').append('<h1>Successfully Logged In!</h1>');
+        $('body').append('<h1>Successfully Logged In!</h1><div type="submit" id="button">Clear Saved Login</div>');
+        function clear() {
+            chrome.cookies.remove({ url: 'https://ccahack.bergen.org/auth/perfigo_validate.jsp', name: 'sign_in' },function(){
+                $('h1').remove();
+                $('#button').remove();
+                $('body').append('<div class="size"><h1>Saved login cleared!</h1></div>');
+
+            })
+        }
+        document.getElementById('button').onclick = clear;
     }
 });

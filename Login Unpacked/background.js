@@ -36,9 +36,6 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
 		            });
 		        }
 	        }
-	        else{
-	            alert("Please click on extension and enter login information");
-	        }
 	    });
     }
 });
