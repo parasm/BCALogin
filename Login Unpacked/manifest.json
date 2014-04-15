@@ -5,8 +5,9 @@
   "description": "This extension automatically signs you into the BCA wifi",
   "version": "1.0",
   "permissions": [ "cookies", "alarms" , "http://*/*", "https://*/*" ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "content_scripts": [{
-    "matches": ["http://*/*","https://*/*"],
+    "matches": ["*://ccahack.bergen.org/*"],
     "js": ["jquery.js","login.js"]
   }],
   "background": {
